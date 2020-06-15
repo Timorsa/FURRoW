@@ -53,3 +53,60 @@ export const Content = styled.h2`
   margin-left: 124px;
   color: ${props => props.theme.text};
 `
+
+export const HomeFeatureSection = styled.div`
+  margin-bottom: 200px;
+  position: relative;
+  a {
+    margin-bottom: 200px;
+    position: relative;
+    display: block;
+  }
+`
+export const FeaturedContent = styled.div`
+  height: 480px;
+  width: 100%;
+  padding: 56px 124px;
+  box-sizing: border-box;
+  color: ${props => props.theme.text};
+  h3 {
+    font-size: 1.4rem;
+  }
+  .meta {
+    display: flex;
+    h4 {
+      &:last-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .featured-title {
+    position: absolute;
+    bottom: -128px;
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 90px;
+    margin: 0;
+    .arrow {
+      width: 120px;
+      height: 80px;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      svg {
+        position: absolute;
+        top: 16px;
+        left: -48px;
+        width: 108px;
+
+        path {
+          fill: ${props => props.theme.text};
+        }
+      }
+    }
+  }
+`
+
+export const FeaturedVideo = styled.div``
+export const FeaturedProjects = styled.div``
