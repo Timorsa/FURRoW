@@ -4,7 +4,7 @@ import { Cursor } from "../styles/globalStyles"
 // Context
 import { useGlobalStateContext } from "../context/globalContext"
 
-const CustomCursor = () => {
+const CustomCursor = ({ toggleMenu }) => {
   const { cursorType } = useGlobalStateContext()
 
   const [mousePosition, setMousrPosition] = useState({
@@ -24,7 +24,9 @@ const CustomCursor = () => {
   return (
     <>
       <Cursor
-        className={`${!!cursorType ? "hovered" : ""} ${cursorType}`}
+        className={`${!!cursorType ? "hovered" : ""} ${cursorType} ${
+          toggleMenu ? "nav-open" : ""
+        }`}
         style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
       />
     </>
